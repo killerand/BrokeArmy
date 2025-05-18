@@ -131,22 +131,24 @@ footer {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  margin: 20px auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .ad-box {
-  flex: 1 1 100px;
-  max-width: 150px;
-  height: 120px;
+  width: 100px;              /* Adjust width as needed */
+  height: 100px;             /* Adjust height as needed */
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  display: inline-block;
 }
 
 .ad-box:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 
