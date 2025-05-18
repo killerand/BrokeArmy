@@ -1,0 +1,129 @@
+/* Basic reset & layout styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #FFF9BF;
+  color: #33004d;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #33004d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main-header,
+footer {
+  background: #F0C1E1;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header nav a {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  max-width: 700px;
+  margin: auto;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Kian's Bizarre B&B Header */
+.bizarre-header {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  background: #F0C1E1;
+  color: #fff;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem;
+  background-color: #CB9DF0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
+}
+
+.scroll-content {
+  display: inline-block;
+}
+
+.video-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  margin-right: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.video-thumb {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.video-title {
+  padding: 0.5rem;
+  font-weight: bold;
+  color: #33004d;
+}
+
+
+/* Ad section placeholder */
+.ad-placeholder {
+  margin: 40px auto;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 8px;
+  width: 90%;
+}
+
+/* Socials hover effect */
+.socials a:hover {
+  transform: scale(1.1);
+  background-color: #d8b4fe;
+  color: #7c3aed;
+}
