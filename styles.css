@@ -1,154 +1,115 @@
-/* Basic reset & layout styling */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #FFF9BF;
-  color: #33004d;
+/* Header styling */
+.main-header {
+  background: #111;
+  color: white;
+  padding: 15px 20px;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
 }
-
-a {
-  color: #33004d;
+.main-header nav a {
+  color: white;
+  margin-left: 15px;
   text-decoration: none;
 }
-
-a:hover {
-  text-decoration: underline;
-}
-
-.main-header,
-footer {
-  background: #F0C1E1;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-header nav a {
-  margin-left: 1rem;
+.logo {
+  font-size: 1.5em;
   font-weight: bold;
 }
 
-main {
-  flex: 1;
-  padding: 2rem;
-  text-align: center;
-}
-
+/* Hero section */
 .hero {
-  max-width: 700px;
-  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f2f2f2;
 }
-
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto;
+}
 .socials a {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #555;
+  font-size: 1.5em;
 }
 
-footer {
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* Kian's Bizarre B&B Header */
+/* Bizarre header */
 .bizarre-header {
+  font-size: 1.8em;
   text-align: center;
-  font-size: 2rem;
-  padding: 20px;
-  background: #F0C1E1;
-  color: #fff;
+  margin: 30px 0 15px;
+  font-weight: bold;
 }
 
+/* Scrollable video section */
 .scroll-container {
   overflow-x: auto;
   white-space: nowrap;
-  padding: 1rem;
-  background-color: #CB9DF0;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE & Edge */
-  scrollbar-width: none;    /* Firefox */
+  padding: 10px;
 }
-
-.scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome & Safari */
-}
-
 .scroll-content {
-  display: inline-block;
+  display: inline-flex;
+  gap: 12px;
 }
-
 .video-card {
   display: inline-block;
-  vertical-align: top;
-  width: 160px;
-  margin-right: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.video-card:hover {
-  transform: scale(1.05);
-}
-
-.video-thumb {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.video-title {
-  padding: 0.5rem;
-  font-weight: bold;
-  color: #33004d;
-}
-
-
-/* Ad section placeholder */
-.ad-placeholder {
-  margin: 40px auto;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 20px;
-  background-color: #ddd;
+  background: #fff;
   border-radius: 8px;
-  width: 90%;
+  overflow: hidden;
+  width: 180px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+  flex-shrink: 0;
+}
+.video-card img.video-thumb {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.video-title {
+  padding: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
 }
 
-/* Socials hover effect */
-.socials a:hover {
-  transform: scale(1.1);
-  background-color: #d8b4fe;
-  color: #7c3aed;
-}
+/* Ad section */
 .ad-row {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px auto;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin: 30px 10px;
+  flex-wrap: wrap;
 }
-
 .ad-box {
-  width: 100px;              /* Adjust width as needed */
-  height: 100px;             /* Adjust height as needed */
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .ad-box:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #eee;
+  font-size: 0.9em;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
 
