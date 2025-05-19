@@ -93,6 +93,12 @@
   font-weight: 600;
   color: #7469B6;
 }
+.video-card iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
 
 /* Ad section */
 .ad-row {
