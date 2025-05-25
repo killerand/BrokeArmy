@@ -1,48 +1,42 @@
-// Show loading screen briefly on page load
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      const loadingScreen = document.getElementById("black-screen");
-      if (loadingScreen) {
-        loadingScreen.classList.add("hidden");
+// Show loading letters immediately
+document.getElementById('loading-letters').style.display = 'block';
+
+// After 2 seconds, hide loading letters and show email signup form
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("loading-letters").style.display = "none";
+    document.getElementById("email-signup").style.display = "block";
+  }, 2000);
+});
+
+// Handle email form submission
+document.getElementById("emailForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const email = form.email.value;
+  const message = document.getElementById("form-message");
+
+  fetch("https://script.google.com/macros/s/AKfycbzhRR8GqzWBxsEqxX0KejKSsF_ra691ljvkhgk8teSKNuzmVy4gqGUtVRjvSBiAl-S1Uw/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `email=${encodeURIComponent(email)}`
+  })
+    .then(response => {
+      if (response.ok) {
+        message.innerText = "🎉 You're on the list!";
+        form.reset();
+
+        // After a short delay, hide loading screen and show main content
         setTimeout(() => {
-          loadingScreen.style.display = "none";
-        }, 1000); // Wait for fade-out to finish
+          document.getElementById("black-screen").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        }, 1500);
+      } else {
+        message.innerText = "❌ Something went wrong.";
       }
-    }, 2500); // Delay before removing loading screen
-  });
-
-  // Log how many video cards exist (for debugging or future logic)
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".video-card");
-    console.log("Video cards found:", cards.length);
-  });
-
-  // Open modal and load specific Rumble video
-  function openVideoModal(videoId) {
-    const modal = document.getElementById("videoModal");
-    const iframe = document.getElementById("rumbleFrame");
-    iframe.src = `https://rumble.com/embed/${videoId}/?pub=4l8tzv`;
-    modal.style.display = "block";
-  }
-
-  // Close modal and stop video playback
-  function closeVideoModal() {
-    const modal = document.getElementById("videoModal");
-    const iframe = document.getElementById("rumbleFrame");
-    iframe.src = ""; // Reset to stop playback
-    modal.style.display = "none";
-  }
-
-  // Optional: close modal if clicking outside of it
-  window.onclick = function (event) {
-    const modal = document.getElementById("videoModal");
-    if (event.target == modal) {
-      closeVideoModal();
-    }
-  };
-
-  // Replace main embedded video dynamically
-  function changeVideo(newUrl) {
-    const mainVideo = document.getElementById('mainVideo');
-    mainVideo.src = newUrl;
-  }
+    })
+    .catch(() => {
+      message.innerText = "❌ Failed to connect. Try again later.";
+    });
+});
