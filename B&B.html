@@ -4,32 +4,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kian’s Bizarre B&B - Episode 1</title>
+  <title>Kian’s Bizarre B&B - Episodes</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link href="B&B.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .episode-block {
+      margin-bottom: 60px;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+    .episode-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #a58aff;
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="container">
-    <h1>Kian’s Bizarre B&B - Episode 1</h1>
+    <h1>Kian’s Bizarre B&B - Full Episode List</h1>
 
-    <div class="video-container">
-      <video controls poster="episode1-thumbnail.jpg">
-        <source src="episode1.mp4" type="video/mp4" />
-        <track src="subtitles-ep1.vtt" kind="subtitles" srclang="en" label="English" default />
-        Your browser does not support the video tag.
-      </video>
+    <!-- Episode 1 -->
+    <div class="episode-block">
+      <div class="episode-title">Episode 1</div>
+      <div class="video-container">
+        <iframe src="https://rumble.com/embed/v6rjiql/?pub=4l8tzv" allowfullscreen></iframe>
+      </div>
     </div>
 
-    <div class="episode-nav">
-      <a href="https://rumble.com/v6tqezf-kians-bizarre-adventure-ep-2-english-subtitles-shocking-twist-revealed.html">Ep 1</a>
-      <a href="https://rumble.com/v6tugin-kians-bizarre-full-video-bts-jin-ep-2-english-subtitles-btsarmy-must-watch.html">Ep 2</a>
-      <a href="episode3.html">Ep 3</a>
-      <a href="episode4.html">Ep 4</a>
-      <!-- More episodes -->
+    <!-- Episode 2 -->
+    <div class="episode-block">
+      <div class="episode-title">Episode 2</div>
+      <div class="video-container">
+        <iframe src="https://rumble.com/embed/v6rnk9t/?pub=4l8tzv" allowfullscreen></iframe>
+      </div>
     </div>
 
+    <!-- Add more episodes below as needed -->
     
   </div>
 
