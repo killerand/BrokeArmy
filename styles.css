@@ -1,71 +1,159 @@
-/* -------------------------------
-   Header Styling
----------------------------------- */
-.main-header {
-  background: #AD88C6;
-  color: #fff;
-  padding: 15px 20px;
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF9BF;
+  color: #333333;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Loading Screen */
+#black-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #F0C1E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-text-words {
+  font-size: 3rem;
+  color: #CB9DF0;
+  margin: 0 0.2rem;
+  animation: blurToClear 1.5s ease-in-out infinite;
+  font-family: 'Exile', sans-serif;
+}
+
+@keyframes blurToClear {
+  0% {
+    filter: blur(6px);
+    opacity: 0.2;
+  }
+
+  50% {
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  100% {
+    filter: blur(6px);
+    opacity: 0.2;
+  }
+}
+
+/* Header Navigation */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #F0C1E1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.main-header nav a {
-  color: #FFE6E6;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.main-header nav a:hover {
-  color: #E1AFD1;
+  padding: 1.2rem 2rem;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 1.6em;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #fff;
+  color: #CB9DF0;
 }
 
-/* -------------------------------
-   Hero Section
----------------------------------- */
-.hero {
+.logo span {
+  color: #FDDBBB;
+}
+
+.navbar a {
+  margin-left: 2rem;
+  color: #CB9DF0;
+  transition: color 0.3s ease;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #F0C1E1;
+}
+
+#menu-icon {
+  display: none;
+  /* Show for responsive later */
+  font-size: 2rem;
+  color: #CB9DF0;
+}
+
+/* Home Section */
+.home {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
   text-align: center;
-  padding: 40px 20px;
-  background: #fff;
-  color: #7469B6;
 }
 
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #CB9DF0;
 }
 
-.hero p {
-  font-size: 1.1em;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #AD88C6;
+.home-content h3 {
+  font-size: 1.8rem;
+  color: #F0C1E1;
 }
 
-.socials a {
-  margin: 0 10px;
-  color: #7469B6;
-  font-size: 1.5em;
+.home-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333333;
 }
 
-.socials a:hover {
-  color: #E1AFD1;
+.social-icons {
+  margin-top: 1.5rem;
 }
-/* -------------------------------
-   Body
----------------------------------- */
-body {
-  background: #FED2E2;
-  color: #33004d; /* Adjust text color for contrast */
-  min-height: 100vh;
-  line-height: 1.5;
+
+.social-icons a {
+  color: #CB9DF0;
+  margin: 0 0.6rem;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FDDBBB;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background: #F0C1E1;
+  flex-wrap: wrap;
+}
+
+.content-box {
+  background: #FFF9BF;
+  color: #333333;
+  border: 2px solid #FDDBBB;
+  padding: 2rem;
+  margin: 1rem;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(203, 157, 240, 0.3);
 }
 /* -------------------------------
    Image content
@@ -106,129 +194,56 @@ body {
   font-size: 1rem;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* -------------------------------
-   Bizarre Header Section
+   Content Section
 ---------------------------------- */
-.bizarre-header {
-  font-size: 1.8em;
-  text-align: center;
-  margin: 30px 0 15px;
-  font-weight: bold;
-  color: #7469B6;
-}
-
-/* -------------------------------
-   Scrollable Video Section
----------------------------------- */
-.scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-.scroll-content {
-  display: inline-flex;
-  gap: 12px;
-}
-
-.video-card {
-  display: inline-block;
-  background: #fff;
+/* Section Styling */
+.content-box {
+  background-color: #fff;
+  padding: 15px 25px;
   border-radius: 10px;
-  overflow: hidden;
-  width: 180px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(173, 136, 198, 0.25);
+  box-shadow: 0 0 10px rgba(203, 157, 240, 0.3);
+  color: #333;
+  font-weight: 600;
   text-align: center;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.video-card:hover {
+.content-box:hover {
+  background-color: #d6f3ff;
   transform: translateY(-4px);
 }
 
-.video-card img.video-thumb {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-
-.video-title {
-  padding: 10px;
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #7469B6;
-}
-
-.video-card iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 8px;
-}
-/* Container for all video content */
-.content-container {
+/* Content List Section */
+.content-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 30px 20px;
-  background-color: #FED2E2;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #ffffff;
 }
 
-/* Each video card */
-.content-container iframe {
-  width: 100%;
-  max-width: 480px;
-  height: 270px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
-/* Video title styling */
-.video-title {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-}
-/* -------------------------------
-   Modal Styles
----------------------------------- */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  position: relative;
-  width: 80%;
-  max-width: 900px;
-  height: 70%;
-  margin: 5% auto;
-  background-color: #000;
-  padding: 0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 10000;
+/* Hover Effect */
+.content-box:hover {
+  background-color: #e0f7ff;
+  border-color: #CB9DF0;
+  transform: scale(1.05);
 }
 
 /* -------------------------------
@@ -286,28 +301,62 @@ body {
     width: 100%;
   }
 }
-
-
-/* -------------------------------
-   Footer Section
----------------------------------- */
-footer {
+.email-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 20px;
-  background: #AD88C6;
-  color: #FFE6E6;
-  font-size: 0.9em;
+  background-color: #ffffff; /* white background */
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-footer a {
+.email-signup h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.email-signup p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.email-signup form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.email-signup input[type="email"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.email-signup button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #a87ecb; /* Purple-ish */
   color: #fff;
-  text-decoration: underline;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-footer a:hover {
-  color: #E1AFD1;
+.email-signup button:hover {
+  background-color: #8f67b2;
 }
-
-
-
 
