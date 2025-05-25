@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrokeArmy Video Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="black-screen">
+    <div id="loading-letters">
+      <span class="loading-text-words">B</span>
+      <span class="loading-text-words">R</span>
+      <span class="loading-text-words">O</span>
+      <span class="loading-text-words">K</span>
+      <span class="loading-text-words">E</span>
+      <span class="loading-text-words">A</span>
+      <span class="loading-text-words">R</span>
+      <span class="loading-text-words">M</span>
+      <span class="loading-text-words">Y</span>
+    </div>
+
+    <!-- Email Signup Form hidden initially -->
+    <section class="email-signup" id="email-signup" style="display: none;">
+      <h2>Join the BrokeArmy List</h2>
+      <p>Get updates on BTS content straight to your inbox 💜</p>
+      <form id="emailForm">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+        <p id="form-message" style="margin-top:10px;"></p>
+      </form>
+    </section>
+  </div>
+
+  <!-- Main Content (hidden initially) -->
+  <div id="main-content" style="display: none;">
+    <!-- Header -->
+    <header class="header">
+      <a href="#home" class="logo">Broke<span>Army</span></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="content.html">Content</a>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Dear <span>BrokeArmy,</span></h1>
+        <h3 class="text-animation">Explore the best BTS videos<span class="animate">Watch BTS paid content for free</span></h3>
+        <p>BTS videos, news, and community content</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/brokearmywonder"><i class='bx bxl-instagram-alt'></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100070384260656"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.tiktok.com/@asgameglimpse"><i class='bx bxl-tiktok'></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content list" id="contentlist">
+      <a href="Kian's-Bizarre-B&B.html" target="_blank" class="image-link">
+        <div class="image-card">
+          <img src="kianbb.jpg" class="card-image" />
+          <div class="card-text">Kian's Bizarre B&B</div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Placeholder Content Boxes -->
+    <section class="content" id="content">
+      <a href="#home"><div class="content-box">Home</div></a>
+      <a href="content.html"><div class="content-box">Content</div></a>
+      <a href=""><div class="content-box">Coming Soon</div></a>
+    </section>
+  </div>
+</body>
+</html>

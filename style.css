@@ -1,0 +1,365 @@
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF9BF;
+  color: #333333;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Loading Screen */
+#black-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #F0C1E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-text-words {
+  font-size: 3rem;
+  color: #CB9DF0;
+  margin: 0 0.2rem;
+  animation: blurToClear 1.5s ease-in-out infinite;
+  font-family: 'Exile', sans-serif;
+}
+
+@keyframes blurToClear {
+  0% {
+    filter: blur(6px);
+    opacity: 0.2;
+  }
+
+  50% {
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  100% {
+    filter: blur(6px);
+    opacity: 0.2;
+  }
+}
+
+/* Header Navigation */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #F0C1E1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #CB9DF0;
+}
+
+.logo span {
+  color: #FDDBBB;
+}
+
+.navbar a {
+  margin-left: 2rem;
+  color: #CB9DF0;
+  transition: color 0.3s ease;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #F0C1E1;
+}
+
+#menu-icon {
+  display: none;
+  /* Show for responsive later */
+  font-size: 2rem;
+  color: #CB9DF0;
+}
+
+/* Home Section */
+.home {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #CB9DF0;
+}
+
+.home-content h3 {
+  font-size: 1.8rem;
+  color: #F0C1E1;
+}
+
+.home-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #CB9DF0;
+  margin: 0 0.6rem;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FDDBBB;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background: #F0C1E1;
+  flex-wrap: wrap;
+}
+
+.content-box {
+  background: #FFF9BF;
+  color: #333333;
+  border: 2px solid #FDDBBB;
+  padding: 2rem;
+  margin: 1rem;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(203, 157, 240, 0.3);
+}
+/* -------------------------------
+   Image content
+---------------------------------- */
+.image-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+.image-card {
+  position: relative;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* -------------------------------
+   Content Section
+---------------------------------- */
+/* Section Styling */
+.content-box {
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(203, 157, 240, 0.3);
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.content-box:hover {
+  background-color: #d6f3ff;
+  transform: translateY(-4px);
+}
+
+/* Content List Section */
+.content-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+
+/* Hover Effect */
+.content-box:hover {
+  background-color: #e0f7ff;
+  border-color: #CB9DF0;
+  transform: scale(1.05);
+}
+
+/* -------------------------------
+   Ad Section
+---------------------------------- */
+.ad-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 10px;
+  flex-wrap: wrap;
+}
+
+.ad-box {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(173, 136, 198, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(116, 105, 182, 0.4);
+}
+
+.ad-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Space them evenly */
+  gap: 20px; /* Adds space between boxes */
+  padding: 20px;
+}
+
+.ad-box {
+  display: block;
+  width: 30%; /* Adjust based on how many items per row */
+  aspect-ratio: 16/9; /* Keeps a consistent shape */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ad-box:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .ad-box {
+    width: 100%;
+  }
+}
+.email-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff; /* white background */
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.email-signup h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.email-signup p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.email-signup form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.email-signup input[type="email"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.email-signup button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #a87ecb; /* Purple-ish */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.email-signup button:hover {
+  background-color: #8f67b2;
+}
+
+
+
