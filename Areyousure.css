@@ -1,0 +1,63 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #FFF9BF; /* Creamy yellow background */
+  color: #1f1f1f; /* Darker text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #CB9DF0; /* Lavender heading */
+}
+
+.video-container {
+  position: relative;
+  background: #F0C1E1; /* Soft pink background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(203, 157, 240, 0.2); /* Soft purple shadow */
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.episode-nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.episode-nav a {
+  padding: 10px 15px;
+  background: #CB9DF0; /* Lavender buttons */
+  color: #1f1f1f; /* Dark text */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.episode-nav a:hover {
+  background: #FDDBBB; /* Peachy glow on hover */
+  transform: translateY(-2px);
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+}
