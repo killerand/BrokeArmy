@@ -38,15 +38,28 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Kian’s Bizarre B&B – Episodes</h1>
+ <div class="container">
+    <h1>Kian’s Bizarre B&B - Episodes</h1>
+
     <div class="episode-buttons">
-      <button onclick="playEp('https://rumble.com/v6tqezf-kians-bizarre-adventure-ep-2-english-subtitles-shocking-twist-revealed.html')">
-        ▶ Play Episode 1
-      </button>
-      <button onclick="playEp('https://rumble.com/v6tugin-kians-bizarre-full-video-bts-jin-ep-2-english-subtitles-btsarmy-must-watch.html')">
-        ▶ Play Episode 2
-      </button>
+      <button onclick="showEpisode('ep1')">Episode 1</button>
+      <button onclick="showEpisode('ep2')">Episode 2</button>
+    </div>
+
+    <!-- Episode 1 -->
+    <div class="episode-block" id="ep1">
+      <div class="episode-title">Episode 1</div>
+      <div class="video-container">
+        <iframe src="https://rumble.com/embed/v6rjiql/?pub=4l8tzv" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Episode 2 -->
+    <div class="episode-block" id="ep2">
+      <div class="episode-title">Episode 2</div>
+      <div class="video-container">
+        <iframe src="https://rumble.com/embed/v6rnk9t/?pub=4l8tzv" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
