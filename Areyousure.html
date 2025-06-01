@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Are You Sure – Episodes</title>
+  <title>Kian’s Bizarre B&B – Episodes</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
   <style>
     body {
@@ -38,15 +38,23 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Are You Sure – Episodes</h1>
+ <div class="container">
+    <h1>Are you sure? - Episodes</h1>
+
     <div class="episode-buttons">
-      <button onclick="playEp('https://rumble.com/v6tzjrn-eng-ays-e01-are-you-sure-ep-1-full-jungkook-and-jimin-english-subtitles-bts.html')">
-        ▶ Play Episode 1
-      </button>
-      
+      <button onclick="showEpisode('ep1')">Episode 1</button>
+      <button onclick="showEpisode('ep2')">Episode 2</button>
     </div>
-  </div>
+
+    <!-- Episode 1 -->
+    <div class="episode-block" id="ep1">
+      <div class="episode-title">Episode 1</div>
+      <div class="video-container">
+        <iframe src="https://rumble.com/v6tzjrn-eng-ays-e01-are-you-sure-ep-1-full-jungkook-and-jimin-english-subtitles-bts.html" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  
 
   <script>
     function playEp(shortUrl) {
