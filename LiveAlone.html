@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Live Alone- Watch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #FFF9BF; /* Creamy yellow background */
+      color: #1f1f1f; /* Darker text for readability */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #CB9DF0; /* Lavender heading */
+    }
+
+    .video-container {
+      position: relative;
+      background: #F0C1E1; /* Soft pink background */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(203, 157, 240, 0.2); /* Soft purple shadow */
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .episode-nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .episode-nav a {
+      padding: 10px 15px;
+      background: #CB9DF0; /* Lavender buttons */
+      color: #1f1f1f; /* Dark text */
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .episode-nav a:hover {
+      background: #FDDBBB; /* Peachy glow on hover */
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>I Live Alone</h1>
+
+    <div class="video-container">
+      <iframe id="player" src="https://rumble.com/embed/v6tugin/?pub=4l8tzv" allowfullscreen></iframe>
+    </div>
+
+    <div class="episode-nav">
+      <a href="#" onclick="switchEpisode('https://rumble.com/embed/v6s65rd/?pub=4l8tzv')">Part 1</a>
+     
+      <!-- Add more episodes if needed -->
+    </div>
+
+
+  <script>
+    function switchEpisode(url) {
+      document.getElementById("player").src = url;
+    }
+  </script>
+
+</body>
+</html>
